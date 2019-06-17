@@ -4,7 +4,7 @@ Created on Mon Jun 17 14:32:46 2019
 
 @author: andressa.contarato
 
-data collection through software Podram api
+data collection through software Prodam api
 """
 
 # packages
