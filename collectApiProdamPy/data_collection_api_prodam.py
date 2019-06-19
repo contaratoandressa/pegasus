@@ -2,7 +2,7 @@
 # packages
 #####################
 
-import pandas as pd, requests, logging, argparse
+import pandas as pd, requests, logging, argparse, time
 
 #####################
 # coleta de contrato
@@ -56,16 +56,19 @@ def api_prodam(start, end, key):
 
 def select_empenho(url, key, year, cod):
     
-    response = requests.get(url, headers={'Authorization': key})
     output = pd.DataFrame()
 
     try:
+        response = requests.get(url, headers={'Authorization': key})
         response.raise_for_status()
         
     except Exception as e:
         
         log.error('Problema na coleta: {error}'.format(error = e))
         pd.DataFrame([url], columns=['URL']).to_csv('missed_urls.csv', mode='a', index=False,  header=False)
+
+        if 'HTTPSConnectionPool' in str(e):
+            time.sleep(5*60)
     
     else:
         
