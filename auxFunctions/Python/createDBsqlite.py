@@ -52,8 +52,8 @@ if __name__ == '__main__':
     sheets = 1 
     nameBD = 'database' 
     sqlite_datas(filename, sheets, nameBD)
-    #filenameDB = 'C:/Users/andressa.contarato/Desktop/DD.db'
-    #query = 'SELECT * FROM DD'
+    #filenameDB = 'dir/BD.db'
+    #query = 'SELECT * FROM BD'
     #data = select_columns_data(filenameDB, query)
         
 
