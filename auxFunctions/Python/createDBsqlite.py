@@ -48,9 +48,9 @@ if __name__ == '__main__':
     # DD
     # filename = 'C:/Users/andressa.contarato/Desktop/DD_total_limpeza.csv' 
     # ISP
-    filename = 'C:/Users/andressa.contarato/Desktop/ISPTotal.csv'
+    filename = 'dir/database.csv'
     sheets = 1 
-    nameBD = 'ISP' 
+    nameBD = 'database' 
     sqlite_datas(filename, sheets, nameBD)
     #filenameDB = 'C:/Users/andressa.contarato/Desktop/DD.db'
     #query = 'SELECT * FROM DD'
