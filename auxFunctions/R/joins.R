@@ -16,6 +16,6 @@ merge_podram <- function(dir = "dir", name1 = "db1", name2 = "db2", var = "id", 
     dados <- rbind(dados, aux)
   }
   dados <- na.omit(dados)
-  write.csv2(dados, paste0(dir, "data_contrato_cod22_empenho_sme_outra_fonte_dados.csv"))
+  write.csv2(dados, paste0(dir, "data.csv"))
   return(dados)
 }
