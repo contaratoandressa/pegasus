@@ -23,7 +23,7 @@ if (length(args)==0) {
   args[2] = "out.txt"
 }
 
-funcao1 <- function(code , init, end){
+funcao1 <- function(arguments){
 
   #' @param ...
   
