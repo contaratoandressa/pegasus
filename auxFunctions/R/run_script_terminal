@@ -5,7 +5,7 @@ rm=list(ls())
 
 # packages
 require(install.load)
-install.load::install_load('BETS')
+install.load::install_load(...)
 
 # source (if you source functions os the other script)
 # source(../function.R)
@@ -13,7 +13,7 @@ install.load::install_load('BETS')
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
 
-# run into terminal: Rscript --vanilla main.R c(10777,4447) "2001-01-01" "2016-01-01"
+# run into terminal: Rscript --vanilla main.R arguments
 
 # test if there is at least one argument: if not, return an error
 if (length(args)==0) {
@@ -25,10 +25,8 @@ if (length(args)==0) {
 
 funcao1 <- function(code , init, end){
 
-  #' @param code: codigo que se quer obter as bases
-  #' @param init: periodo inicial
-  #' @param end: periodo final
+  #' @param ...
   
-  data <- BETSget(code = ,from = init, to = end)
+  data <- ...
   return(data)
 }
