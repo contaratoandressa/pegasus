@@ -7,7 +7,7 @@ rm=list(ls())
 require(install.load)
 install.load::install_load(...)
 
-# source (if you source functions os the other script)
+# source (if you source functions on the other script)
 # source(../function.R)
 
 #!/usr/bin/env Rscript
