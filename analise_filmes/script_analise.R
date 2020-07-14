@@ -1,3 +1,5 @@
+rm(list=ls())
+
 # packages
 install.load::install_load("readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", "e1071","plyr")
 
@@ -63,12 +65,14 @@ x[0:5,]
 print("Top 5 dias com menos compra de ingressos: ")
 x[(nrow(x)-4):(nrow(x)),]
 
+data$ano = strftime(data$Estreia, "%Y", tz = "UTC")
+data$ano_venda = strftime(data$`Datas das Vendas`, "%Y", tz = "UTC")
+
 filme_ano = function(data){
   anos = unique(data$ano)
   for(i in 1:length(anos)){
     x = aggregate(data$Filme, by = list(data$`Dias de Vendas após a Estréia`), FUN = length)
     x = x[order(x$x, decreasing = T),]
-    data$ano = strftime(data$Estreia, "%Y")
     print(paste0("Top 5 dias com mais compra de ingressos no ano de : ", anos[i]))
     print(x[0:5,])
     print(paste0("Top 5 dias com menos compra de ingressos no ano de : ", anos[i]))
@@ -93,28 +97,45 @@ print(paste0("Filmes com nomes menores ou iguais a um caracter: ", apply(data[,"
 
 # etl
 
-# Estreia: truncar datas em 2017 como minimo
+# Estreia: truncar datas em 2017 como minimo e valores NA
+
+print(paste0("Removendo ", dim(data[which(is.na(data$ano) == T),])[1], " do dataset."))
+data = data[which(is.na(data$ano) == F),]
+print("Removido NA, transformando em numeric: ")
+data$ano = as.numeric(data$ano)
+print("Inspecionando datas antes de 2017: ")
+unique(filter(data, ano < 2017)$Filme)
+unique(filter(data, ano < 2017)$`Genero do Filme`)
+unique(filter(data, ano < 2017)$ano_venda)
+print(paste0("Truncando datas de 2017 até 2020, com remoção de ", dim(filter(data, ano < 2017))[1], " linhas do dataset."))
+data = filter(data, ano < 2017)
 
 # Genero do Filme: remover N/A, ?, padronizar e analisar palavras no plural e singular
-
-# Inspecionar valores 0 em Tickets vendidos Pela Ingresso.com
-
-# Inspecionar valores 0 em Tickets vendidos pelo Cinema
-
-# Inspecionar valores 0 em Tickets vendidos Pela Ingresso.com e Tickets vendidos pelo Cinema
-
-# Datas de Venda Após Estréia: recriar datas de venda após estreia
-
-
-
-knitr::kable(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A")))
+print("Consequentemente os valores N/A e ? foram removidos da variavel Genero do Filme: ")
+unique(data$`Genero do Filme`)
 print("Quantidade de linhas com valores faltantes em gênero: ")
 dim(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A")))
-print("Filmes com gêneros faltantes: ")
-unique(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A"))$Filme)
-data = dplyr::filter(data, !data$`Genero do Filme` %in% c("?", "N/A"))
-print("Dataset sem valores faltantes em Gênero do Filme")
-dim(data)
-print(paste0("Retirada de: ", round(1-91050/91200, 4)*100 , "% da base"))
+print("Padronização")
 data$`Genero do Filme` = stringi::stri_trans_general(data$`Genero do Filme`, "Latin-ASCII")
 data$`Genero do Filme` = toupper(data$`Genero do Filme`)
+print(paste0("De 74 gêneros únicos, passou para: ", length(unique(data$`Genero do Filme`))))
+
+# Datas de Venda Após Estréia: recriar datas de venda após estreia
+print("Variável: Datas de Vendas Após a Estréia com NA: ")
+dplyr::filter(data, data$`Dias de Vendas após a Estréia` == "Falha ao retonar data estreia")
+data$dia_estreia_novo = as.Date(strftime(data$`Datas das Vendas`, "%Y/%m/%d")) - as.Date(strftime(data$Estreia, "%Y/%m/%d"))
+
+# Inspecionar valores 0 em Tickets vendidos Pela Ingresso.com
+print(paste0("Valor de bilheteria da ingressos.com dos filmes listados acima: ", "Suposição de falhas técnicas."))
+filter(data, data$`Tickets vendidos Pela Ingresso.com` == 0)
+
+# Inspecionar valores 0 em Tickets vendidos pelo Cinema
+print(paste0("Valor de bilheteria dos cinemas dos filmes listados acima: ", "Suposição de falhas técnicas."))
+filter(data, data$`Tickets vendidos pelo Cinema` == 0)
+
+# Inspecionar valores 0 em Tickets vendidos Pela Ingresso.com e Tickets vendidos pelo Cinema
+filter(data, data$`Tickets vendidos pelo Cinema` == 0 & data$`Tickets vendidos Pela Ingresso.com` == 0)
+
+
+
+
