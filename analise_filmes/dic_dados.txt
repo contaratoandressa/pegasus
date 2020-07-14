@@ -1,0 +1,12 @@
+﻿Dicionário de Dados
+
+Variável | Descrição | Tipo
+
+Filme | Nome do filme | character
+Datas das Vendas | Data das vendas | data
+Estreia | Data da estreia do filme | data
+Dias de Vendas após a Estréia | Números de dias que o filme foi vendido | character
+Genero do Filme | Tiologia do filme | character
+Tickets vendidos Pela Ingresso.com | Volume de tickets vendidos | numeric
+Tickets vendidos pelo Cinema  | Volume de tickets vendidos | numeric
+

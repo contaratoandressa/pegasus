@@ -1,7 +1,7 @@
 ---
 title: "Predição de Vendas de Bilheteria"
 author: "Andressa Contarato"
-date: "July 12, 2020"
+date: "Julho 17, 2020"
 output: html_document
 ---
 
@@ -13,16 +13,232 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Criação de um modelo que seja capaz de estimar as vendas médias mensais por gênero de filmes em 2021.
 
-```{r cars, echo=FALSE}
-summary(cars)
+```{r, echo=FALSE, warning=FALSE}
+# This code chunk simply makes sure that all the libraries used here are installed, it will not be shown in the report (notice echo = FALSE).
+packages <- c("readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", "e1071","plyr")
+if ( length(missing_pkgs <- setdiff(packages, rownames(installed.packages()))) > 0) {
+  message("Installing missing package(s): ", paste(missing_pkgs, collapse = ", "))
+  install.packages(missing_pkgs)
+}
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r,  echo=FALSE, warning=FALSE}
+library(readxl) # fast excel reader
+#library(googlesheets) # fast google spreadsheet reader (not used here but could be useful)
+data <- read_excel("estudo_de_caso_-_cientista_de_dados.xlsx")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Análise Descritiva
+
+Foi feita uma análise descritiva para inspecionar a base de dados a se trabalhar.
+
+1. A base de dados possui 7 variáveis e 91200 observações.
+2. As variáveis **Filme**, **Dias de Vendas após a Estréia** e **Genero do Filme** são variáveis do tipo texto. As variáveis **Datas de Vendas** e **Estreia** são variáveis com característica de data. E, por fim, as variáveis **Tickets vendidos Pela Ingresso.com** e **Tickets vendidos pelo Cinema** são numéricas. 
+3. A variável **Dias de Vendas após a Estréia** apresenta valores numéricos em forma de texto e iremos inspecionar também, para identificarmos qualquer problema.
+4. Análise descritiva:
+  + **Tickets vendidos Pela Ingresso.com**: O mínimo de tickets vendidos pela Ingresso.com é zero, o que gera um ponto de atenção nessa informação. O maior valor foi de 211096.23 o que gera outro ponto de atenção quanto a casa decimal, pelo fato de que não existe meio ingresso, mas sim o pagamento de um ingresso com meia (de estudante, idoso, criança ...). Em média são vendidos 174.69 tickets pela Ingresso.com no período de tempo analisado. E, 50% dos valores abaixo da mediana da quatidade de tickets vendidos não chega a 1 ticket.
+  + **Tickets vendidos pelo Cinema**: Analogamente a variável **Tickets vendidos Pela Ingresso.com** o mínimo de tickets vendidos pelo cinema é de zero. O máximo de 635212.7, em média são vendidos 2347.1 tickets, onde 50% dos valores abaixo são de 22.8 tickets.
+  + Olhando o período de tempo das variáveis **Datas de Vendas** e **Estreia**, detecta-se valores faltantes, os chamados NA's. 
+  + O período de análise motrado na variável **Datas de Vendas** é de 2017-01-01 até 2020-06-13 o que mostra uma busca por ingressos com a esperança do término da quarentena.
+  + Foi feita uma análise do tamanho das classes nas variáveis **Filme**, **Genero do Filme** e **Dias de Vendas após a Estréia**, onde se quis analisar a quantidade de classes presentes em Filmes (3564 filmes), Gênero do filme (74 categorias) e Dias de Vendas Após a Estréia (111 dias contabilizados).
+  + A variável **Dias de Vendas após a Estréia** apresenta uma série de pontos de atenção, desde valores negativos (que podem ser valores anes da estréia) até falta de padronização e valores faltantes. 
+  + Dois tipos de soluções de tratamento da variável: recriar as categorias ou calcular a diferença entre as datas e transformar a variável em numérica.  
+  + **Tickets vendidos Pela Ingresso.com** e **Tickets vendidos pelo Cinema**: Terminando a primeira etapa de inspeção da base, foi feito um gráfico chamado boxplot para entender o comportamento dos dados e possíveis outliers, valores muito altos na amostra que podem influenciar nos resultados finais.
+
+
+```{r, echo=FALSE, warning=FALSE}
+#dim(data)
+#knitr::kable(str(data))
+knitr::kable(summary(data[,c("Tickets vendidos Pela Ingresso.com", "Tickets vendidos pelo Cinema")]))
+#print(paste0("Período inicial de tempo dos dados de Datas das Vendas e Estreia respectivamente: ", apply(data[,c("Datas das #Vendas", "Estreia")], 2, min)))
+#print(paste0("Período final de tempo dos dados de Datas das Vendas e Estreia respectivamente: ", apply(data[,c("Datas das #Vendas", "Estreia")], 2, max)))
+#freq = function(x){
+#  #return(prop.table(table(x)))
+#  return(length(unique(x)))
+#}
+#print("Quantidade de classes das variáveis Filme, Genero do Filme e Dias de Vendas após a Estréia, respectivamente:") 
+#apply(data[,c("Filme","Genero do Filme","Dias de Vendas após a Estréia")], 2, freq)
+```
+
+
+
+```{r, echo=FALSE, warning=FALSE}
+x = aggregate(data$Filme, by = list(data$`Dias de Vendas após a Estréia`), FUN = length)
+x = x[order(x$x, decreasing = T),]
+barplot(x$x, col = "blue", main = "Distibuição dos dados por Dias de Vendas após a Estréia", xlim = c(0,140), names.arg = x$Group.1, cex.names = 1)
+
+knitr::kable(x)
+
+boxplot(data[,c("Tickets vendidos Pela Ingresso.com", "Tickets vendidos pelo Cinema")])
+```
+
+## ETL
+
+Após a análise descritiva, a próxima etapa é o tratamento dos dados para melhores insights.
+
+1. A variável **Filme** não necessitou de nenhuma modificação.
+2. A variável **Genero do Filme** apresenta valores faltantes ("N/A") e caracteres inputados de forma equivocada na base ("?"). Inspecionando as linhas com estes valores vê-se filmes com gênero faltante e sem padrão 
+(generoBiografia Musical e generoBiografia musical). Como o objetivo é prever o valor de vendas médio em 2021 por gênero de filme, a opção é remover estes valores faltantes. Além de ter sido padronizado, contando com 47  gêneros após a padronização.
+3. **Dias de Vendas Após a Estréia** foi removido "Falha ao retonar data estreia" por se tratar de um valor faltante.
+4. A variável **Datas das Vendas** não apresentou nenhuma inconsistência ou valor Na.
+5. A variável **Estreia** apresentou valores em NA, oolhando para os dados, consistem em compras de ticket após "Mais de 100 dias da data de estreia" somente do filme de animação "GHOST IN THE SHELL 1995". Sendo removido tais valores faltantes, mas para uma análise profunda deveos ver qual problema que se deu a este específico filme. E, também "Falha ao retonar data estreia" o que nos leva a pensar em valores faltantes.
+6. As variáveis numéricas **Tickets vendidos Pela Ingresso.com** e **Tickets vendidos pelo Cinema** tem valores zeros em mais de 1000 filmes, entretanto a retirada de valores assim, por mais estranhos que possam ser é arriscado devido a fatoes internos e externos que possam ter refletido no valor igual a zero da compra de ingressos, como falha no sistema, não abertura para compras, até mesmo um dia com alta periculosidade de sair de casa causdo por grandes chuvas ... Todavia, foi retirado as linhas cujos valores eram zero tanto para Ingresso.com quanto para o próprio cinema.
+
+
+```{r, echo=FALSE, warning=FALSE}
+print("Variável: Filme")
+print(paste0("Quantidade de Valores faltantes: ", table(is.na(data$Filme))[1] - dim(data)[1]))
+#qt_um = function(x){
+#  x = unique(x)
+#  for(i in 1:length(x)){
+    
+#    if(nchar(x[i]) <= 1){
+#      print(x[i])
+#    }  
+#  }
+#}
+# apply(data[,"Filme"], 2, print)
+print(paste0("Filmes com nomes menores ou iguais a um caracter: ", 0))
+```
+
+```{r, echo=FALSE, warning=FALSE}
+print("Variável: Gênero do Filme")
+print(paste0("Tipos de Gêneros: ", unique(data[,"Genero do Filme"])))
+knitr::kable(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A")))
+print("Quantidade de linhas com valores faltantes em gênero: ")
+dim(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A")))
+print("Filmes com gêneros faltantes: ")
+unique(dplyr::filter(data, data$`Genero do Filme` %in% c("?", "N/A"))$Filme)
+data = dplyr::filter(data, !data$`Genero do Filme` %in% c("?", "N/A"))
+print("Dataset sem valores faltantes em Gênero do Filme")
+dim(data)
+print(paste0("Retirada de: ", round(1-91050/91200, 4)*100 , "% da base"))
+data$`Genero do Filme` = stringi::stri_trans_general(data$`Genero do Filme`, "Latin-ASCII")
+data$`Genero do Filme` = toupper(data$`Genero do Filme`)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+print("Variável: Dias de Vendas Após a Estréia")
+dplyr::filter(data, data$`Dias de Vendas após a Estréia` == "Falha ao retonar data estreia")
+print("Filmes com a falha em Dias de Vendas após a Estréia: ")
+unique(dplyr::filter(data, data$`Dias de Vendas após a Estréia` == "Falha ao retonar data estreia")$Filme)
+print(paste0("Valor de bilheteria da ingressos.com dos filmes listados acima: ", 0))
+#aux = filter(data, data$`Dias de Vendas após a Estréia` == "Falha ao retonar data estreia")
+#aux[,"Tickets vendidos Pela Ingresso.com"]
+data = dplyr::filter(data, !data$`Dias de Vendas após a Estréia` == "Falha ao retonar data estreia")
+print("Dataset sem valores faltantes em Dias de Vendas Após a Estréia")
+dim(data)
+print(paste0("Retirada de: ", round(1-87895/91200, 4)*100 , "% da base original"))
+
+data$dia_estreia_novo = as.Date(strftime(data$`Datas das Vendas`, "%Y/%m/%d")) - as.Date(strftime(data$Estreia, "%Y/%m/%d"))
+
+print("Analisando NA em Datas das Vendas")
+data[which(is.na(data$`Datas das Vendas`) == T),]
+print("Analisando Na em Estreia")
+data[which(is.na(data$Estreia) == T),]
+unique(data[which(is.na(data$Estreia) == T),]$Filme)
+unique(data[which(is.na(data$Estreia) == T),]$`Genero do Filme`)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+print("Analisando valores 0 nas variáveis numéricas, a saber: Tickets vendidos Pela Ingresso.com")
+dplyr::filter(data, data$`Tickets vendidos Pela Ingresso.com` == 0)
+print(paste0("Quantidade de filmes com valores iguais a zero: ", length(unique(dplyr::filter(data, data$`Tickets vendidos Pela Ingresso.com` == 0)$Filme))))
+print("Analisando valores 0 nas variáveis numéricas, a saber: Tickets vendidos pelo Cinema")
+dplyr::filter(data, data$`Tickets vendidos pelo Cinema` == 0)
+print(paste0("Quantidade de filmes com valores iguais a zero: ", length(unique(dplyr::filter(data, data$`Tickets vendidos pelo Cinema` == 0)$Filme))))
+
+knitr::kable(dplyr::filter(data, data$`Tickets vendidos Pela Ingresso.com` == 0 & data$`Tickets vendidos pelo Cinema` == 0))
+
+data$ID = seq(1,nrow(data))
+id = dplyr::filter(data, data$`Tickets vendidos Pela Ingresso.com` == 0 & data$`Tickets vendidos pelo Cinema` == 0)$ID
+data = data[-id,]
+print("Dataset sem valores iguais a zero de Tickets vendidos Pela Ingresso.com e Tickets vendidos pelo Cinema")
+dim(data)
+print(paste0("Retirada de: ", round(1-87893/91200, 4)*100 , "% da base original"))
+data = data[,-ncol(data)]
+```
+
+
+## Modelo
+
+Após a etapa de análises descritivas e ETL, com o dataset devidamente tratado, começa a parte da modelagem.
+
+1. Modelo de regressão linear onde a variável dependente (Y) será **Tickets vendidos Pela Ingresso.com**.
+2. Serão criadas variáveis dummies para o **Genero do Filme**.
+3. Agregar por mês a média de compras de tickets.
+4. Inserir variáveis extras.
+
+```{r, echo=FALSE, warning=FALSE}
+data$new_data = strftime(data$`Datas das Vendas`, "%Y/%m")
+data = aggregate(data$`Tickets vendidos Pela Ingresso.com`, by = list(data = data$new_data, genero = data$`Genero do Filme`, vendas_apos_estreia = data$`Dias de Vendas após a Estréia`, cinema = data$`Tickets vendidos pelo Cinema`), FUN = sum)
+names(data)[ncol(data)] = "ingresso.com"
+dim(data)
+```
+
+## Insights
+
+1. Mesmo apresentando uma correlação proporcional entre Tickets vendidos pelo Cinema e Tickets vendidos Pela Ingresso.com, o modelo inicial não deu significativo para o Intercepto e Tickets vendidos pelo Cinema, somente para algumas categorias de Genero do Filme, o que remete a duas estratégias: 
+
++ remoção de valores 0, dado que são muitos nas variáveis Tickets vendidos pelo Cinema e Tickets vendidos Pela Ingresso.com
++ agrupamento mais macro dos gêneros de filmes.
+
+A primeira não deu certo. Assim, foi feito o modelo mantendo o intercepto, removendo Tickets vendidos pelo Cinema e mantendo Genero do Filme. O próximo passo foi analisar quais categorias eram significativas para o modelo. Abaixo a lista das categorias removidas, ao todo 44,6% do total de gêneros:
+
++ BIOGRAFIA,COMEDIA,DOCUMENTARIO,DRAMA,FICCAO,LIVE ACTION,SUPER-HEROI,BIOGRAFIA (BRASIL),BIOGRAFIA MUSICAL,FANTASIA,FICCAO CIENTIFICA,DOCUMENTARIO MUSICAL,FESTIVAL,MUSICAL (BRASIL),POLICIAL,RELIGIOSO,SUSPENSE,TERROR,MUSICAL INFANTIL,OPERA
+
+```{r, echo=FALSE, warning=FALSE}
+print("Teste de normalidade da variável Tickets vendidos Pela Ingresso.com: p-valor=2.2e-16, não apresenta distribuição Normal.")
+#ks.test(data$ingresso.com, "pnorm")
+print("Teste de normalidade da variável Tickets vendidos pelo Cinema: p-valor=2.2e-16, não apresenta distribuição Normal.")
+#ks.test(data$cinema, "pnorm")
+print(paste0("Teste de correlação entre as variáveis Tickets vendidos pelo Cinema e Tickets vendidos Pela Ingresso.com: p-valor=0.8732219, isso implica que as variáveis são proporcionalmente correlacionadas."))
+# cor.test(data$cinema, data$ingresso.com)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+require(e1071)
+require(plyr) 
+require(ggplot2)
+qplot(ingresso.com, cinema, data = data, 
+      main = "HEMAGLOBIN and HEMATOCRIT relationship") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  stat_smooth(method="lm", col="red", size=1) +
+  geom_point(colour = "blue", size = 1.5) +
+  scale_y_continuous(breaks = c(30:65), minor_breaks = NULL) +
+  scale_x_continuous(breaks = c(10:25), minor_breaks = NULL)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+data = dplyr::filter(data, !genero %in% c("BIOGRAFIA","COMEDIA","DOCUMENTARIO","DRAMA","FICCAO","LIVE ACTION","SUPER-HEROI",
+                                   "BIOGRAFIA (BRASIL)","BIOGRAFIA MUSICAL","FANTASIA","FICCAO CIENTIFICA",
+                                   "DOCUMENTARIO MUSICAL","FESTIVAL","MUSICAL (BRASIL)","POLICIAL","RELIGIOSO",
+                                   "SUSPENSE","TERROR","MUSICAL INFANTIL","OPERA"))
+mod1 = lm(ingresso.com ~ genero, data = data)
+summary(mod1)
+```
+
+## Diagnóstico dos Resíduos
+
+A última etapa é de validação do modelo, chamada de diagnóstico dos resíduos, para se ter uma ideia da consistência e robustex deste modelo. O resíduos se mostraram não ter uma distribuição Normal, foram feitos testes com outras distribuições, como Gama, Normal Gama, Poison e Log-Normal, semêxito. Uma alternativa para este modelo seria investir em caudas mais pesadas como GHSkew e também modelos de Detecção de Anomalias, dado o ano de 2020.
+
+```{r, echo=FALSE, warning=FALSE}
+
+print("Teste de Normalidade dos resíduos")
+ks.test(residuals(mod1), "pnorm", mean(residuals(mod1)))
+
+print("Resíduos vs values ajustados")
+plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=1)
+
+print("Teste de normalidade dos resíduos")
+plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=2)
+
+print("Pontos outliers")
+plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=3)
+
+print("Distância de COKK-pontos influentes")
+plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=5)
+plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=4)
+
+predict(mod1, interval = 100)
+```
