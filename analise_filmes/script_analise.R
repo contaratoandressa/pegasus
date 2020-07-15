@@ -1,7 +1,7 @@
 rm(list=ls())
 
 # packages
-install.load::install_load("readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", "e1071","plyr")
+install.load::install_load("readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", "e1071","plyr", "magick")
 
 # dataset
 data <- read_excel("estudo_de_caso_-_cientista_de_dados.xlsx")
@@ -98,7 +98,6 @@ print(paste0("Filmes com nomes menores ou iguais a um caracter: ", apply(data[,"
 # etl
 
 # Estreia: truncar datas em 2017 como minimo e valores NA
-
 print(paste0("Removendo ", dim(data[which(is.na(data$ano) == T),])[1], " do dataset."))
 data = data[which(is.na(data$ano) == F),]
 print("Removido NA, transformando em numeric: ")
@@ -136,6 +135,46 @@ filter(data, data$`Tickets vendidos pelo Cinema` == 0)
 # Inspecionar valores 0 em Tickets vendidos Pela Ingresso.com e Tickets vendidos pelo Cinema
 filter(data, data$`Tickets vendidos pelo Cinema` == 0 & data$`Tickets vendidos Pela Ingresso.com` == 0)
 
+# criação da variável: americano = 1 se o filme é estrangeiro, 0 c.c.
+americano = read.csv("americano.csv")
+names(americano)[1] = names(data)[1] 
+data = left_join(data, americano, by = "Filme")
 
+# modelo
+data$new_data = strftime(data$Estreia, "%Y/%m")
+data1 = aggregate(data$`Tickets vendidos Pela Ingresso.com`, by = list(data = data$new_data, genero = data$`Genero do Filme`, americano = data$Americano), FUN = sum)
+data2 = aggregate(data$`Tickets vendidos pelo Cinema`, by = list(data = data$new_data, genero = data$`Genero do Filme`, americano = data$Americano), FUN = sum)
+data1$ID = paste0(data1$data," ", data1$genero)
+data2$ID = paste0(data2$data," ", data2$genero)
+data = left_join(data1, data2, by = "ID")
 
+data = data[,c(1,2,3,4,9)]
+names(data) = c("data","genero","americano","ingresso","cinema")
+
+print("Teste de normalidade da variável Tickets vendidos Pela Ingresso.com: p-valor=2.2e-16, não apresenta distribuição Normal.")
+shapiro.test(data$ingresso)
+print("Teste de normalidade da variável Tickets vendidos pelo Cinema: p-valor=2.2e-16, não apresenta distribuição Normal.")
+shapiro.test(data$cinema)
+print(paste0("Teste de correlação entre as variáveis Tickets vendidos pelo Cinema e Tickets vendidos Pela Ingresso.com: p-valor=0.8732219, isso implica que as variáveis são proporcionalmente correlacionadas."))
+cor.test(data$cinema, data$ingresso)
+
+# importacao de bases:
+# Ipea: http://www.ipeadata.gov.br/Default.aspx
+# Google Trends: 
+google_trends = read.csv("google_trends2.csv")
+names(google_trends)[1] = names(data)[1] 
+data = left_join(data, google_trends, by = "data")
+
+ipea = read_excel("ipeadata[14-07-2020-09-52].xls")
+names(ipea) = c("data", "evn")
+data$ano = substr(data$data, 1, 4)
+
+data$env = rep(0, nrow(data))
+anos = unique(data$ano)
+for (i in 1:length(anos)) {
+  data[which(data$ano == anos[i]) == T,]$env = ipea[which(ipea$data == anos[i]) == T,]$env
+}
+
+mod1 = lm(ingresso.com ~ env + genero + americano + cinema + volume, data = data)
+summary(mod1)
 
