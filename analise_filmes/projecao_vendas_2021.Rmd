@@ -248,15 +248,14 @@ PerformanceAnalytics::chart.Correlation(data[,c("ingresso", "cinema", "google_tr
 
 set.seed(123)  # setting seed to reproduce results of random sampling
 train_sample <- sample(1:nrow(data), 0.7*nrow(data))  #  training and testing: 70/30 split
-train <- data[train_sample, ]  # training data
-test  <- data[-train_sample, ]   # test data
+train = dplyr::filter(data, data < 2020)
+test = dplyr::filter(data, data == 2020)
 
-train = dplyr::filter(train, !genero %in% c("CLASSICO","COMEDIA E TERROR","COMEDIA ROMANTICA","CURTA","LIVRE","ROCK","THRILLER"))
-mod1 = lm(log(ingresso) ~ evn + google_trends + prop_cinema +genero, data = train)
+mod1 = lm(ingresso ~ -1 + google_trends + prop_cinema + genero, data = train)
 summary(mod1)
 AIC(mod1)
 
-print("modelo final: modelo_final = lm(log(ingresso) ~ evn + google_trends + prop_cinema +genero, data = train)")
+print("modelo final: modelo_final = lm(ingresso ~ -1 + google_trends + prop_cinema + genero, data = train)")
 ```
 
 ## Diagnóstico dos resíduos
@@ -267,6 +266,9 @@ Após ser feito o modelo é preciso validar as hipóteses a cerca da construçã
 # redisual diagnostics
 print("Resíduos vs values ajustados")
 plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=1)
+
+print("Teste de heterocedasticidade")
+lmtest::bptest(mod1)
 
 print("Teste de normalidade dos resíduos")
 plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=2)
@@ -280,8 +282,8 @@ plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=4)
 
 Ao final foi feita a validação dos dados de treino para com os dados de teste. E, logo após foi feita a predição para o ano de 2021 para cada gênero por meio dos coeficientes obtidos no modelo. Considerando os demais gêneros iguais a 0 e o e-ésimo será predito. Os dados de google trends, evn e de tickets foram preditos por meio de analise de séries temporais, com a modelagem da distribuição GHSkew, por ter caudas mais pesadas e modelar melhor dados mais anômalos na amostra devido ao quadro que vivemos de pandemia atualmente.
 
-1. Valor de volume de buscas no Google Trends no ano de 2021: 2382 buscas aproximadamente.
-2. Valor de EVN no ano de 2021: 45 para a expectativa de vida ao nascer.
+1. Valor de volume de buscas no Google Trends no ano de 2021: 3500 buscas aproximadamente.
+2. Valor de taxa de tickets no ano de 2021: 0.75 para a taxa de tickets no cinema. Para este usou-se a média dos últimos meses referentes a pandemia.
 
 ## Melhorias
 
@@ -296,3 +298,17 @@ Ao final foi feita a validação dos dados de treino para com os dados de teste.
   + focar em idosos com distribuição de filmes antigos
   + focar em crianças com distribuição de filmes infantis
   + competição de criação de histórias
+7. Uso de métodos emsemble para analisar modelos como SVR, Árvores de Regressão e ANN conjuntamente.
+
+## Referências
+
+1. Modelo de anomalias: https://cran.r-project.org/web/packages/anomalize/vignettes/anomalize_methods.html
+2. Modelo de predição: https://rpubs.com/bitettir/simpleregression
+3. Métodos Emsemble: https://rpubs.com/monoboy/ensemble
+4. Métodos Emsemble: https://www.rpubs.com/examkartikeya/Ensemble
+5. Métodos Emsemble: https://rpubs.com/fangya/svr
+6. Méotod Emsemble: https://machinelearningmastery.com/machine-learning-ensembles-with-r/
+7. Leitura de imagens: https://cran.r-project.org/web/packages/magick/vignettes/intro.html
+8. Modelo de Regressão Linear Múltipla com Variáveis categóricas: https://rpubs.com/cyobero/187387
+9. Heterocedasticidade: https://rpubs.com/cyobero/187387
+10. Modelos Garch: Contarato, Andressa, Seleção do Modelo Mais Eficiente na Predição de Recursos Finaceiros: Um Estudo com Ativos, Trabalho Final de Curso (Pós-Graduação em Finanças), Departamento de Estatística, Universidade Federal Fluminense, Rio de Janeiro, 2020

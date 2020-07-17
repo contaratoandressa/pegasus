@@ -1,7 +1,7 @@
 rm(list=ls())
 
 # packages
-install.load::install_load("readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", 
+install.load::install_load("lmtest","readxl", "knitr", "tidyr", "dplyr", "ggplot2", "plotly", 
                            "e1071","plyr", "magick","corrplot", "Hmisc","PerformanceAnalytics", "lmtest","sandwich",
                            "PortfolioAnalytics", "quantmod", "nnet", "caret", "zoo","writexl","tseries", "moments",
                            "forecast", "polynom", "rugarch", "xts","SkewHyperbolic") #rgl
@@ -215,7 +215,9 @@ corrplot(res2$r, type="upper", order="hclust", p.mat = res2$P, sig.level = 0.01,
 corrplot(res2$r, type="upper", order="hclust", p.mat = res2$P, sig.level = 0.01, insig = "blank")
 chart.Correlation(data[,c("ingresso", "cinema", "google_trends", "evn")], histogram=TRUE, pch=19)
 
-write.csv2(data,"/home/andressa/dev/workspace/pegasus/analise_filmes/data_model.csv")
+data$genero = as.factor(data$genero)
+
+write.csv2(data,"data_model.csv")
 
 # nao deu certo com americano, removi logo
 # mod1 = lm(ingresso ~ genero + americano + evn + google_trends + prop_cinema, data = data)
@@ -224,20 +226,25 @@ write.csv2(data,"/home/andressa/dev/workspace/pegasus/analise_filmes/data_model.
 
 set.seed(123)  # setting seed to reproduce results of random sampling
 train_sample <- sample(1:nrow(data), 0.7*nrow(data))  #  training and testing: 70/30 split
-train <- data[train_sample, ]  # training data
-test  <- data[-train_sample, ]   # test data
+# train <- data[train_sample, ]  # training data
+# test  <- data[-train_sample, ]   # test data
+train = filter(data, data < 2020)
+test = filter(data, data == 2020)
 
 # R2: 0.9387, AIC: 2715.47
-mod1 = lm(ingresso ~ evn + google_trends + prop_cinema + cinema + genero, data = train)
-summary(mod1)
-AIC(mod1)
+# mod1 = lm(ingresso ~ evn + google_trends + prop_cinema + cinema + genero, data = train)
+# summary(mod1)
+# AIC(mod1)
 
 # R2: 0.6023 AIC: 2913.605
-mod1 = lm(ingresso ~ evn + google_trends + prop_cinema + genero, data = train)
+mod1 = lm(ingresso ~ -1 + google_trends + prop_cinema + genero, data = train)
 summary(mod1)
+
 AIC(mod1)
 
 # Diagnostico residuos
+
+lmtest::bptest(mod1)
 
 print("Teste de Normalidade dos resíduos")
 shapiro.test(residuals(mod1))
@@ -258,52 +265,61 @@ plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=4)
 
 # no diagnostico dos residus mostrou heterocedasticidade
 # R2: 0.8918 AIC: 470.58
-mod1 = lm(log(ingresso) ~ evn + google_trends + prop_cinema + genero, data = train)
-summary(mod1)
-AIC(mod1)
-
-# R2: 0.8609 AIC:416.0187
-train = dplyr::filter(train, !genero %in% c("CLASSICO","COMEDIA E TERROR","COMEDIA ROMANTICA","CURTA","LIVRE","ROCK","THRILLER"))
-mod1 = lm(log(ingresso) ~ evn + google_trends + prop_cinema +genero, data = train)
-summary(mod1)
-AIC(mod1)
+# mod1 = lm(log(ingresso) ~ evn + google_trends + prop_cinema + genero, data = train)
+# summary(mod1)
+# AIC(mod1)
+# 
+# # R2: 0.8609 AIC:416.0187
+# train = dplyr::filter(train, !genero %in% c("CLASSICO","COMEDIA E TERROR","COMEDIA ROMANTICA","CURTA","LIVRE","ROCK","THRILLER"))
+# mod1 = lm(log(ingresso) ~ evn + google_trends + prop_cinema +genero, data = train)
+# summary(mod1)
+# AIC(mod1)
 
 # Diagnostico residuos
 
-print("Teste de Normalidade dos resíduos")
-shapiro.test(residuals(mod1))
-
-print("Resíduos vs values ajustados")
-plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=1)
-
-print("Teste de normalidade dos resíduos")
-plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=2)
-
-print("Pontos outliers")
-plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=3)
-
-print("Distância de COKK-pontos influentes")
-plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=5)
-plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=4)
+# print("Teste de Normalidade dos resíduos")
+# shapiro.test(residuals(mod1))
+# 
+# print("Resíduos vs values ajustados")
+# plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=1)
+# 
+# print("Teste de normalidade dos resíduos")
+# plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=2)
+# 
+# print("Pontos outliers")
+# plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=3)
+# 
+# print("Distância de COKK-pontos influentes")
+# plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=5)
+# plot(mod1, pch=16, col="blue", lty=1, lwd=2, which=4)
 
 # forecast
-
-# 1. Add predictions 
-pred.int <- predict(mod1, interval = "prediction")
-mydata <- cbind(data, pred.int)
-# 2. Regression line + confidence intervals
-p <- ggplot(mydata, aes(ingresso, google_trends)) +
-  geom_point() +
-  stat_smooth(method = lm)
-# 3. Add prediction intervals
-p + geom_line(aes(y = lwr), color = "red", linetype = "dashed")+
-  geom_line(aes(y = upr), color = "red", linetype = "dashed")
 
 predict(mod1, interval = "prediction")
 predict(mod1)
 
 predict <- exp(predict(mod1)[0:nrow(test)])  # predicted values
 
+gt = 3500
+# evn = 45
+prop_cinema = mean(filter(data, data == 2020)$prop_cinema)
+prop_cinema = max(data$prop_cinema)
+
+pred = c()
+names = sort(unique(as.character(train$genero)))
+for (i in 4:length(mod1$coefficients)) {
+  pred[i] = mod1$coefficients[1]*gt+
+    mod1$coefficients[2]*prop_cinema + mod1$coefficients[i]
+}
+pred = round(pred[4:length(pred)])
+result = cbind(names,pred)
+result = data.frame(result)
+result$pred = as.numeric(result$pred)
+result$pred = ifelse(result$pred < 0, 0, result$pred)
+write.csv2(result,"predicao.csv")
+
+
+predict(mod2, newdata = nd, interval = "prediction", level = 0.95)
 
 # TS
 garch_data <- function(data, percent_train, var){
@@ -366,8 +382,3 @@ ipea$data = as.numeric(ipea$data)
 
 garch_data(data = google_trends, percent_train = 0.7, var = "volume")
 garch_data(data = ipea, percent_train = 0.7, var = "evn")
-
-
-write.csv2(cbind(test,predict),"/home/andressa/dev/workspace/pegasus/analise_filmes/teste.csv")
-write.csv2(train,"/home/andressa/dev/workspace/pegasus/analise_filmes/treino.csv")
-write.csv2(data.frame(exp(predict(mod1))),"/home/andressa/dev/workspace/pegasus/analise_filmes/predicao.csv")
