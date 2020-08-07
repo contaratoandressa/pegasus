@@ -1,0 +1,32 @@
+# main script download dataset
+
+# clean memory
+rm=list(ls())
+
+# packages
+require(install.load)
+install.load::install_load(...)
+
+# source (if you source functions on the other script)
+# source(../function.R)
+
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+
+# run into terminal: Rscript --vanilla main.R arguments
+
+# test if there is at least one argument: if not, return an error
+if (length(args)==0) {
+  stop("At least one argument must be supplied (input file).n", call.=FALSE)
+} else if (length(args)==1) {
+  # default output file
+  args[2] = "out.txt"
+}
+
+funcao1 <- function(arguments){
+
+  #' @param ...
+  
+  data <- ...
+  return(data)
+}
