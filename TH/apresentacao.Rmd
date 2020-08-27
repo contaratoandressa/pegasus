@@ -1,0 +1,35 @@
+---
+title: "Apresentação de Resultados"
+author: "Andressa Contarato"
+date: "August 28, 2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+Este é um relatório de análises de dados.
+
+## Slide with Bullets
+
+Quer-se responder a três questões:
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

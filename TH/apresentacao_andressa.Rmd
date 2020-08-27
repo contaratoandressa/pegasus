@@ -1,0 +1,173 @@
+---
+title: "Relatório de Análises"
+author: "Andressa Contarato"
+date: "August 27, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Este documento é um relatório de apresentação de resultados obtidos, respondendo as questões abaixo.
+
+# Questão 1
+
+Os 36 indivíduos de uma turma são divididos ao acaso em dois grupos de 18 indivíduos. Para o primeiro grupo o ensino de português é feito usando elementos visuais. Enquanto isso, no segundo grupo o ensino é feito pelo método tradiiconal. No final do período é aplicado um teste, comum aos dois grupos, com os seguintes resultados:
+
+Grupo 1: 
+g1 = c(7.3,8.2,6.0,7.7,8.0,6.1,5.6,5.3,5.9,5.8,5.8,7.1,5.1,8.0,7.6,8.3,4.9,6.5)
+
+Grupo 2: 
+g2 = c(7.5,6.2,5.7,4.4,4.7,5.8,5.0,6.0,6.5,5.8,4.5,5.1,5.5,6.0,5.8,5.8,5.7,7.5)
+
+Considerando os dois grupos como amostras aleatórias de duas populações independentes e Normalmente distribuídas, determine um intervalo de confiança de 95% para a verdadeira diferenças das médias populacionais dos dois grupos.
+
+
+```{r, echo=FALSE}
+# Grupo 1
+g1 = c(7.3,8.2,6.0,7.7,8.0,6.1,5.6,5.3,5.9,5.8,5.8,7.1,5.1,8.0,7.6,8.3,4.9,6.5)
+# Grupo 2
+g2 = c(7.5,6.2,5.7,4.4,4.7,5.8,5.0,6.0,6.5,5.8,4.5,5.1,5.5,6.0,5.8,5.8,5.7,7.5)
+# Ajuste da base de dados para aplicação do teste de hipoteses
+class = rep(c("G1","G2"),c(length(g1),length(g1)))
+data = data.frame(grupos=c(g1,g2),classe=class)
+```
+
+## Análise Descritiva
+
+Primeiramente foi inspecionado os dados. São ao todo 18 valores para o grupo 1 e para o grupo 2. A média das notas dos dois grupos se diferenciam, em média os alunos do grupo 1 tem uma nota de 6,6 enquanto que o grupo 2 é de 5,8. Além disso, o valor que divide 50% das notas abaixo e 50% acima no grupo 1 é de 6,3 e do grupo 2 de 5,8. Ou seja, podemos ver uma diferença significativa entre as notas. 
+
+## Criando um Intervalo de Confiança para a Diferença das Notas Médias dos Alunos
+
+Esta etapa consistiu em criar um intervalo de confiança para identificar em que intervalo se encontra essa diferença das médias das notas, onde queremos ter a certeza de 95% de confiança de que essa diferença esteja contida nesse intervalo.
+
+Mas, antes vamos aplicar um teste estatístico, chamado de teste de hipóteses para identificar se realmente há diferença entre as notas. Para isso, necessitamos testar duas hipóteses: a que há diferença (o que desejamos saber) e a que não há diferença (contra argumento se a nossa hipótese não for válida).
+
+Hipóteses a serem testadas
+H0: mu1 = mu2
+H1: Mu1 != mu2
+
+O resultado mostrou que há diferença entre a média de notas. Ou seja, um método de ensino pode ser mais eficiente que o outro.
+
+```{r, echo=FALSE}
+t.test(grupos ~ classe, data, conf.level=0.95)
+```
+
+```{r}
+alpha = 0.05
+
+# IC de diferenca de médias
+d_mu <- mean(g1) - mean(g2)
+d_sd <- sqrt(var(g1) + var(g2))
+
+d_mu - qnorm(1-alpha/2) * d_sd/sqrt(length(g1)); d_mu + qnorm(1-alpha/2) * d_sd/sqrt(length(g1))
+```
+
+E, com 95% de confiança, pode-se falar que a diferença entre as notas das médias está num intervalo de [0.21, 1.54].
+
+# Questão 2
+
+A tabela a seguir contém as notas na 1° prova (x) e na 2° prova (y) de uma amostra de alunos de uma determinada disciplina. Deseja-se construir um intervalo de confiança a 95% para as diferenças entre as médias populacionais das notas da 1° e da 2° prova. Os dados são os seguintes:
+  
+Notas da 1ª e 2ª provas para um grupo de alunos
+1° Prova X: 
+x = c(6.3,1.5,5.9,6.4,5.5,5.4,5.4,8.0,5.9,8.0,6.5,2.0,3.6,6.0,9.8,6.8,5.3,8.7,6.5,6.4,7.7,8.5,5.3,6.9,8.0,8.2,7.1,8.4,6.0,5.5,7.2,6.4,5.5,6.4)
+
+2° Prova Y: 
+y = c(3.6,3.8,3.0,6.0,4.3,4.6,6.4,5.5,6.0,4.3,4.3,5.2,3.4,2.8,8.3,7.1,5.5,8.2,3.8,5.5,6.7,6.7,4.4,3.4,5.9,6.0,5.9,6.8,5.0,6.2,5.4,4.7,3.6,5.2)
+
+a) Que suposições deveriam ser feitas? O método estatística a ser usado neste caso deve considerar amostras pareadas ou amostras independentes? Porque?
+
+Suposições: normalidade dos dados.
+O método deveria considerar amostras pareadas, por se tratar de um subconjunto de alunos que compõem o total de uma classe.
+
+b) Use o método que você considera mais adequado para obter o intervalo de confiança.
+
+Teste de normalidade
+
+Vamos considerar que queremos ter 99% de confiança nos resultados. Faremos uma aplicação de um teste estatístico para obtermos a suposição de que os dados seguem a distribuição Normal para ser aplicado o teste onde veremos se há igualdade entre as notas ou não.
+
+Hipóteses a serem testadas:
+H0: os dados seguem uma distribuição normal
+H1: os dados não seguem uma distribuição normal
+
+```{r}
+# dados
+# primeira prova
+x = c(6.3,1.5,5.9,6.4,5.5,5.4,5.4,8.0,5.9,8.0,6.5,2.0,3.6,6.0,9.8,6.8,5.3,8.7,6.5,6.4,7.7,8.5,5.3,6.9,8.0,8.2,7.1,8.4,6.0,5.5,7.2,6.4,5.5,6.4)
+# segunda prova
+y = c(3.6,3.8,3.0,6.0,4.3,4.6,6.4,5.5,6.0,4.3,4.3,5.2,3.4,2.8,8.3,7.1,5.5,8.2,3.8,5.5,6.7,6.7,4.4,3.4,5.9,6.0,5.9,6.8,5.0,6.2,5.4,4.7,3.6,5.2)
+
+# nível de significância
+alpha = 0.01
+
+# teste de normalidade
+shapiro.test(x)
+shapiro.test(y)
+```
+
+Como o nível de significância é menor que o p-valor, não há evidências de se rejeitar
+a hipótese nula, concluimos que os dados são oriundos de uma distribuição normal. A etapa seguinte é verificar se teve alguma diferença na média das notas entre a primeira e segunda aplicação de provas.
+
+Hipóteses a serem testadas
+H0: mu1 = mu2
+H1: Mu1 != mu2
+
+```{r}
+# teste de igualdade de médias
+t.test(x, y, paired = TRUE, conf.level = 0.01)
+```
+
+c) Pode-se concluir com base nessa análise que, em média, o desempenho dos alunos da 1° prova para a 2° prova?
+
+Considerando alpha = 0.01 > p-valor, podemos concluir que as médias das notas são diferentes.
+
+# Questão 4 (EXTRA)
+
+Uma empresa recebeu 70.000,00 reais em vendas e que 25.000,00 reais tenha vindo do e-commerce. Para manter o site funcionando é preciso gastar 7.000,00 reais e na loja física precisa de 17.500,00 reais. Calculo o ROI para cada uma das formas de atuação e comente o resultado.
+
+ROI = (Ganho obtido – Investimento) / Investimento
+
+```{r}
+
+# dados
+ganho_obtido = 70000
+gasto_ecommerce = 25000
+gasto_site = 7000
+gasto_loja_fisica = 17500
+
+# aplicação do ROI
+(ROI_ecommerce = (ganho_obtido - gasto_ecommerce)/gasto_ecommerce)
+(ROI_site = (ganho_obtido - gasto_site)/gasto_site)
+(ROI_loja_fisica = (ganho_obtido - gasto_loja_fisica)/gasto_loja_fisica)
+```
+
+O ROI é um parâmetro que serve para analisar o retorno sobre qualquer tipo de investimento – seja um projeto de pesquisa tecnológica, uma campanha de marketing, a compra de uma nova máquina ou a aquisição de um novo título de renda fixa para sua carteira de investimentos.
+
+Avaliar como iniciativas e investimentos diversos contribuem para a obtenção de resultados;
+- Planejar objetivos e metas com base em resultados atingíveis;
+- Identificar o prazo de retorno dos investimentos, bem como a curva de resposta específica de cada um;
+- Viabilizar um processo mais objetivo de tomada de decisões, fundamentado em números;
+- Proporcionar um potencial aumento nos retornos e nos lucros.
+
+ROI_ecommerce = 1.8
+
+Isso significa que o retorno sobre o investimento foi de 1.8 vezes o valor aplicado
+inicialmente. Como o ROI normalmente é expresso em forma de porcentagem, multiplica-se
+tal resultado por 100. Com isso, no exemplo acima, o ROI foi de 180%.
+
+ROI_site = 9
+
+Isso significa que o retorno sobre o investimento foi de 9 vezes o valor aplicado
+inicialmente. Como o ROI normalmente é expresso em forma de porcentagem, multiplica-se
+tal resultado por 100. Com isso, no exemplo acima, o ROI foi de 900%.
+
+
+ROI_loja_fisica = 3
+
+Isso significa que o retorno sobre o investimento foi de 3 vezes o valor aplicado
+inicialmente. Como o ROI normalmente é expresso em forma de porcentagem, multiplica-se
+tal resultado por 100. Com isso, no exemplo acima, o ROI foi de 300%.
