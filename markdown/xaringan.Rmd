@@ -1,0 +1,57 @@
+---
+title: "Teste"
+subtitle: "Fazendo um teste de análises com Ninja Presentation"
+author: "Andressa Contarato"
+institute: "Medium Andressa Contarato"
+date: "03/09/2020"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    #chakra: libs/remark-latest.min.js
+    css: ["rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+## Fazendo um teste com os dados de Air Passegers
+
+Este é um documento teste para análise de dados com os dados de air passengers, disponível em: <https://www.kaggle.com/andreazzini/international-airline-passengers> da competição da *Kaggle*.
+
+## Chamando os dados
+
+Foi feita a importação dos dados por meio do comando base do R, read.csv.
+
+```{r , echo = FALSE}
+data = read.csv("/home/andressa/Desktop/Pastas/USP/modelos_dinamicos/airline_passengers.csv")
+```
+ 
+---
+ 
+## Análises descritivas
+
+- Tamanho do Dataset
+- Nome das Variáveis
+- Summary dos Dados
+
+```{r , echo = TRUE}
+dim(data)
+names(data)
+summary(data)
+```
+
+---
+
+## Plotagem dos gráficos
+
+```{r , echo = TRUE}
+plot(data[,2])
+```

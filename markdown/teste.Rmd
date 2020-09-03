@@ -1,0 +1,43 @@
+---
+title: "Air Passengers"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Fazendo um teste com os dados de Air Passegers
+
+Este é um documento teste para análise de dados com os dados de air passengers, disponível em: <https://www.kaggle.com/andreazzini/international-airline-passengers> da competição da *Kaggle*.
+
+# Chamando os dados
+
+Foi feita a importação dos dados por meio do comando base do R, read.csv.
+
+```{r , echo = FALSE}
+data = read.csv("/home/andressa/Desktop/Pastas/USP/modelos_dinamicos/airline_passengers.csv")
+```
+
+## Análises descritivas
+
+- Tamanho do Dataset
+- Nome das Variáveis
+- Summary dos Dados
+
+```{r , echo = TRUE}
+dim(data)
+names(data)
+summary(data)
+```
+
+## Plotagem dos gráficos
+
+```{r , echo = TRUE}
+plot(data[,2])
+```
