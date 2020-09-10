@@ -1,0 +1,2151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d0" for="edge" attr.name="label" attr.type="string"/>
+<graph edgedefault="directed"><node id="can"/>
+<node id="you"/>
+<node id="see"/>
+<node id="if"/>
+<node id="8"/>
+<node id="bit"/>
+<node id="hides"/>
+<node id="in"/>
+<node id="the"/>
+<node id="grass"/>
+<node id="he"/>
+<node id="uses"/>
+<node id="new"/>
+<node id="star"/>
+<node id="power"/>
+<node id="fix"/>
+<node id="why"/>
+<node id="did"/>
+<node id="bring"/>
+<node id="back"/>
+<node id="those"/>
+<node id="old"/>
+<node id="maps"/>
+<node id="mecha"/>
+<node id="paladin"/>
+<node id="surge"/>
+<node id="s"/>
+<node id="last"/>
+<node id="stage"/>
+<node id="is"/>
+<node id="glitched"/>
+<node id="doesn"/>
+<node id="t"/>
+<node id="have"/>
+<node id="sword"/>
+<node id="and"/>
+<node id="wing"/>
+<node id="too"/>
+<node id="guys"/>
+<node id="just"/>
+<node id="buff"/>
+<node id="coltltte"/>
+<node id="gale"/>
+<node id="gadget"/>
+<node id="plis"/>
+<node id="when"/>
+<node id="update"/>
+<node id="coming"/>
+<node id="to"/>
+<node id="iphone"/>
+<node id="i"/>
+<node id="cant"/>
+<node id="play"/>
+<node id="so"/>
+<node id="where"/>
+<node id="giftshop"/>
+<node id="join"/>
+<node id="game"/>
+<node id="good"/>
+<node id="conection"/>
+<node id="any"/>
+<node id="suggestions"/>
+<node id="por"/>
+<node id="favor"/>
+<node id="poderiam"/>
+<node id="me"/>
+<node id="ajudar"/>
+<node id="eu"/>
+<node id="com"/>
+<node id="problema"/>
+<node id="no"/>
+<node id="brawl"/>
+<node id="não"/>
+<node id="é"/>
+<node id="minha"/>
+<node id="internet"/>
+<node id="ja"/>
+<node id="atualizei"/>
+<node id="o"/>
+<node id="jogo"/>
+<node id="we"/>
+<node id="will"/>
+<node id="item"/>
+<node id="shop"/>
+<node id="gift"/>
+<node id="bruh"/>
+<node id="tara"/>
+<node id="two"/>
+<node id="eyes"/>
+<node id="now"/>
+<node id="huh"/>
+<node id="change"/>
+<node id="colettes"/>
+<node id="mechanic"/>
+<node id="it"/>
+<node id="garage"/>
+<node id="rt"/>
+<node id="yo"/>
+<node id="colt"/>
+<node id="damn"/>
+<node id="thick"/>
+<node id="dani"/>
+<node id="agora"/>
+<node id="aparece"/>
+<node id="mais"/>
+<node id="aonde"/>
+<node id="a"/>
+<node id="bola"/>
+<node id="tá"/>
+<node id="isso"/>
+<node id="um"/>
+<node id="bug"/>
+<node id="ou"/>
+<node id="faz"/>
+<node id="parte"/>
+<node id="da"/>
+<node id="atualização"/>
+<node id="end"/>
+<node id="up"/>
+<node id="changing"/>
+<node id="collet"/>
+<node id="special"/>
+<node id="how"/>
+<node id="this"/>
+<node id="idea"/>
+<node id="once"/>
+<node id="super"/>
+<node id="charge"/>
+<node id="she"/>
+<node id="th"/>
+<node id="ta"/>
+<node id="maravilhoso"/>
+<node id="parabéns"/>
+<node id="toda"/>
+<node id="equipe"/>
+<node id="releases"/>
+<node id="an"/>
+<node id="with"/>
+<node id="minimal"/>
+<node id="hype"/>
+<node id="immediately"/>
+<node id="better"/>
+<node id="than"/>
+<node id="that"/>
+<node id="was"/>
+<node id="hyped"/>
+<node id="for"/>
+<node id="over"/>
+<node id="year"/>
+<node id="lmao"/>
+<node id="thanks"/>
+<node id="m"/>
+<node id="sprout"/>
+<node id="dev"/>
+<node id="teams"/>
+<node id="always"/>
+<node id="hide"/>
+<node id="some"/>
+<node id="updates"/>
+<node id="man"/>
+<node id="love"/>
+<node id="on"/>
+<node id="appstore"/>
+<node id="logo"/>
+<node id="soft"/>
+<node id="wasn"/>
+<node id="broke"/>
+<node id="best"/>
+<node id="supercell"/>
+<node id="hey"/>
+<node id="active"/>
+<node id="community"/>
+<node id="issue"/>
+<node id="conundrum"/>
+<node id="would"/>
+<node id="need"/>
+<node id="chat"/>
+<node id="discuss"/>
+<node id="someone"/>
+<edge source="can" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="can" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="can" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="can" target="wing">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="can" target="too">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="can" target="guys">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="can" target="charge">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="can" target="she">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="can" target="th">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="can" target="isso">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="see" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="see" target="we">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="see" target="will">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="see" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="see" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="if" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="if" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="if" target="uses">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="if" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="8" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="8" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="8" target="bit">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="8" target="hides">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bit" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bit" target="hides">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bit" target="in">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hides" target="in">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="hides" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="in" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="the" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="the" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">5</data>
+</edge>
+<edge source="the" target="where">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="the" target="will">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="the" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="grass" target="in">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="grass" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="grass" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="grass" target="he">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="he" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="he" target="uses">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="he" target="new">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="new" target="uses">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="new" target="star">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="new" target="power">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="new" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="star" target="uses">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="power" target="star">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="power" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="fix" target="star">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="fix" target="power">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="fix" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="fix" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="fix" target="gale">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="fix" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="why" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="why" target="yo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="did" target="fix">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="did" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="did" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bring" target="did">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bring" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bring" target="those">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="back" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="back" target="bring">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="back" target="those">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="back" target="old">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="old" target="those">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="maps" target="those">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="maps" target="old">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="maps" target="mecha">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="maps" target="paladin">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="mecha" target="old">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="mecha" target="paladin">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="mecha" target="surge">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="paladin" target="surge">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="paladin" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="s" target="surge">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="s" target="stage">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="s" target="supercell">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="last" target="surge">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="last" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="last" target="stage">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="last">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="stage">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="plis">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="is" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="where">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="mechanic">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="is" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="yo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="special">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="super">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="she">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="new">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="is" target="logo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="is" target="soft">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="glitched" target="stage">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="glitched" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="glitched" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="doesn" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="doesn" target="glitched">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="doesn" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="doesn" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="t" target="wasn">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="t" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="have" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="have" target="sword">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="have" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="have" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="have" target="tara">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="have" target="two">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="have" target="hey">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="sword" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="sword" target="wing">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="sword">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="wing">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="too">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="minimal">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="hype">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="change">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="m">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="and" target="sprout">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="dev">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="and" target="teams">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="too" target="wing">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="too" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="guys" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="guys" target="just">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="guys" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="guys" target="up">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="just" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="buff" target="guys">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="buff" target="just">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="buff" target="coltltte">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="buff" target="fix">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="coltltte" target="just">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="coltltte" target="fix">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="coltltte" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="gale" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="gale" target="plis">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="gadget" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="gadget" target="gale">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="gadget" target="plis">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="gadget" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="plis" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="when" target="will">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="update" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="update" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="coming" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="coming" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="coming" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="coming" target="iphone">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="to" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="to" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="iphone" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="iphone">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="play">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="join">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="thanks">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="i" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="updates">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="man">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="love">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="i" target="that">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="would">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="i" target="need">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="cant" target="iphone">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="cant" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">6</data>
+</edge>
+<edge source="cant" target="play">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="cant" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="cant" target="giftshop">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="cant" target="join">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="cant" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="cant" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="cant" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="play" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="play" target="where">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="so" target="where">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="so" target="tara">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="so" target="thick">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="giftshop" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="giftshop" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="giftshop" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="join" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="game" target="join">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="game" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="game" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="game" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="game" target="supercell">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="game" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="game" target="hey">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="good" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="good" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="conection" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="conection" target="good">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="conection" target="suggestions">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="any" target="good">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="any" target="conection">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="any" target="suggestions">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="any" target="por">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="por" target="suggestions">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="favor" target="suggestions">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="favor" target="por">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="favor" target="poderiam">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="favor" target="me">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="poderiam" target="por">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="me" target="poderiam">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="ajudar" target="poderiam">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="ajudar" target="me">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="ajudar" target="eu">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="ajudar" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="eu" target="me">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="eu" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="eu" target="minha">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="eu" target="internet">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="eu" target="ja">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="com" target="eu">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="com" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="com" target="problema">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="com" target="no">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="problema" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="no" target="problema">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="no" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="brawl" target="problema">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="brawl" target="no">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="brawl" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="brawl" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="não" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="minha" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="minha" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="internet" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="internet" target="minha">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="internet" target="ja">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="ja" target="o">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="atualizei" target="eu">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="atualizei" target="ja">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="atualizei" target="o">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="atualizei" target="jogo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="o" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="jogo" target="o">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="jogo" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="jogo" target="we">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="we" target="when">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="we" target="will">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="item" target="see">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="item" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="item" target="shop">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="shop" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="gift" target="item">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="gift" target="shop">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="gift" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bruh" target="shop">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bruh" target="gift">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bruh" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bruh" target="tara">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="tara" target="two">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="eyes" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="eyes" target="two">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="eyes" target="now">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="eyes" target="huh">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="now" target="two">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="huh" target="now">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="change" target="now">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="change" target="huh">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="change" target="colettes">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="change" target="mechanic">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="change" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="change" target="m">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="change" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="colettes" target="huh">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="colettes" target="mechanic">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="colettes" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="it" target="mechanic">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="it" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="it" target="soft">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="it" target="wasn">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="it" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="it" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="it" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="garage" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="garage" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="garage" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="garage" target="yo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="rt" target="yo">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="rt" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="rt" target="thanks">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="rt" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="rt" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="colt" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="colt" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="colt" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="colt" target="damn">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="damn" target="so">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="damn" target="thick">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="damn" target="dani">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="dani" target="thick">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="dani" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="agora" target="thick">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="agora" target="dani">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="agora" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="agora" target="aparece">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="aparece" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="aparece" target="mais">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="mais" target="não">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="aonde" target="aparece">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="aonde" target="mais">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="aonde" target="bola">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="mais">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="aonde">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="bola">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="tá">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="maravilhoso">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="parabéns">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="toda">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="equipe">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="for">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="a" target="over">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="year">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="a" target="lmao">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bola" target="tá">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bola" target="isso">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="tá" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="isso" target="tá">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="isso" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="isso" target="um">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="isso" target="th">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="isso" target="ta">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="isso" target="maravilhoso">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="um" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bug" target="é">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="bug" target="um">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bug" target="ou">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="bug" target="faz">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="ou" target="um">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="ou" target="parte">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="faz" target="ou">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="faz" target="parte">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="da" target="faz">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="da" target="parte">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="da" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="atualização" target="parte">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="atualização" target="da">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="atualização" target="if">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="atualização" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="end" target="you">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="end" target="guys">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="end" target="up">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="changing" target="end">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="changing" target="up">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="changing" target="collet">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="changing" target="special">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="collet" target="up">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="collet" target="special">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="collet" target="how">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="collet" target="idea">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="collet" target="once">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="collet" target="super">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="collet" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="how" target="special">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="how" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="how" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="idea" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="idea" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="idea" target="once">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="once" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="once" target="super">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="charge" target="super">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="charge" target="is">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="charge" target="she">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="she" target="th">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="ta" target="th">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="maravilhoso" target="ta">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="maravilhoso" target="parabéns">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="parabéns" target="ta">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="parabéns" target="toda">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="equipe" target="toda">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="equipe" target="releases">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="releases" target="toda">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="releases" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="an" target="equipe">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="an" target="releases">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="an" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="an" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="an" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="an" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="an" target="community">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="minimal" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="minimal" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="hype" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hype" target="minimal">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="hype" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="immediately" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="immediately" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="immediately" target="than">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="better" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="better" target="immediately">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="better" target="than">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="better" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="than" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="than" target="that">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="that" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="that" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="that" target="would">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hyped" target="that">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hyped" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="hyped" target="over">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="for" target="was">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="for" target="hyped">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="for" target="over">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="over" target="year">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="lmao" target="year">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="lmao" target="thanks">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="lmao" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="thanks" target="year">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="m" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="m" target="sprout">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="sprout" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="dev" target="sprout">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="dev" target="teams">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="always" target="dev">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="always" target="teams">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="always" target="hide">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="always" target="some">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hide" target="teams">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hide" target="some">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="hide" target="updates">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="some" target="updates">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="man" target="some">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="man" target="updates">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="love" target="man">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="love" target="this">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="love" target="rt">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="on" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">3</data>
+</edge>
+<edge source="on" target="update">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="appstore" target="on">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="appstore" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">4</data>
+</edge>
+<edge source="appstore" target="new">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="logo" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="logo" target="new">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="logo" target="soft">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="soft" target="wasn">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="broke" target="wasn">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="broke" target="t">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="broke" target="why">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="broke" target="fix">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="best" target="it">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="best" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="best" target="supercell">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="best" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="supercell" target="the">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hey" target="s">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="hey" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="active" target="have">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="active" target="an">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="active" target="community">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="active" target="issue">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="active" target="would">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="active" target="need">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="active" target="chat">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="active" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="community" target="issue">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="community" target="conundrum">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="issue" target="that">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="conundrum" target="issue">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="conundrum" target="that">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="conundrum" target="i">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="need" target="would">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="chat" target="need">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="chat" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="chat" target="discuss">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="discuss" target="to">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="discuss" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">2</data>
+</edge>
+<edge source="discuss" target="someone">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+<edge source="someone" target="with">
+  <data key="d0">brawlstars</data>
+  <data key="d1">1</data>
+</edge>
+</graph></graphml>
